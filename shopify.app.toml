@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "customer-by-payment-custom-app"
+client_id = "28077e063294a74208c3d32c178c0430"
+application_url = "https://snap-commented-near-calling.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_customer_payment_methods,read_own_subscription_contracts,write_own_subscription_contracts"
+
+[auth]
+redirect_urls = [
+  "https://snap-commented-near-calling.trycloudflare.com/auth/callback",
+  "https://snap-commented-near-calling.trycloudflare.com/auth/shopify/callback",
+  "https://snap-commented-near-calling.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-59860116.myshopify.com"
